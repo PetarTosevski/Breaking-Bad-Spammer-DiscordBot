@@ -4,11 +4,12 @@ const {
 	EmbedBuilder,
 	PermissionsBitField,
 	Permissions,
+	InteractionCollector,
 } = require("discord.js");
 
 require("dotenv").config();
 
-const prefix = "!Marko ";
+const prefix = process.env.PREFIX;
 
 const client = new Client({
 	intents: [
@@ -42,11 +43,13 @@ client.on("messageCreate", (message) => {
 	const m = args.slice(1).join(" ");
 
 	//COMMANDS
-
+	const MarkosDiscordId = 162969507239821312;
+	const MyDiscordIt = 174972829308157952;
 	if (command === "pali") {
-		message.channel.send('Marko dosta "Rabotish" i pali breaking bad vekje ');
+		message.channel.send(`<@162969507239821312> dosta "Rabotish" i pali breaking bad vekje`);
 	}
 
+	//Switch
 	if (command === "rabotish?") {
 		const rndInt = Math.floor(Math.random() * 6) + 1;
 		console.log(rndInt);
@@ -81,6 +84,7 @@ client.on("messageCreate", (message) => {
 		}
 	}
 
+	//Spam
 	if (command === "spam") {
 		//Member
 		const member =
@@ -98,6 +102,52 @@ client.on("messageCreate", (message) => {
 		//Send
 		member.send(m);
 		message.channel.send(`${member.user.tag} Recieved the following message: *${m}*`);
+	}
+
+	//Button
+	if (command === "gleame?") {
+		const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
+
+		const button = new ActionRowBuilder().addComponents(
+			new ButtonBuilder()
+				.setCustomId("button")
+				.setLabel("Click Here to find out!")
+				.setStyle(ButtonStyle.Success)
+		);
+
+		const embed = new EmbedBuilder()
+			.setColor("DarkGreen")
+			.setDescription("Dali Marko ke pushti Breaking Bad?");
+		let description = null;
+
+		message.channel.send({ embeds: [embed], components: [button] });
+
+		const collector = message.channel.createMessageComponentCollector();
+
+		let rndNumber = null;
+		collector.on("collect", async (i) => {
+			let descriptionList = [
+				"Da be brat samo kafe da si naprai za 15 min i se pali",
+				"Ne brat, mnogu rabota ima denes",
+				"Simon brat a TI imash nekad rabota A??????",
+				"Nema vreme za breaking bad ama @Minatour, @Bube, Son of Bitch aj edna brawlche",
+				"Ami kakov Breaking Bad be daj sah da igrame",
+				"Zasho da gleash serii koa moesh da chitas knigi i da igrash sah",
+				"Ke pushti od koa ke se pomine so voda",
+			];
+
+			let descList = [0, 1, 2, 3, 4, 5, 6];
+
+			descList.splice(rndNumber, 1);
+			let result = Math.floor(Math.random() * descList.length);
+
+			description = descriptionList[descList[result]];
+			rndNumber = descList[result];
+
+			const secondEmbed = new EmbedBuilder().setColor("DarkGreen").setDescription(`${description}`);
+
+			await i.update({ embeds: [secondEmbed], components: [button] });
+		});
 	}
 });
 
