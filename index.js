@@ -6,7 +6,7 @@ const {
 	Permissions,
 } = require("discord.js");
 
-require('dotenv').config();
+require("dotenv").config();
 
 const prefix = "!Marko ";
 
@@ -53,18 +53,31 @@ client.on("messageCreate", (message) => {
 		switch (rndInt) {
 			case 0:
 				message.channel.send('"DA"');
+				break;
+
 			case 1:
 				message.channel.send("Ne");
+				break;
+
 			case 2:
 				message.channel.send("Ne lmfao");
+				break;
+
 			case 3:
 				message.channel.send("Koga rabotel marko lol");
+
+				break;
 			case 4:
 				message.channel.send("CinCout");
+				break;
+
 			case 5:
 				message.channel.send("Plati mi kirija beeee :@");
+				break;
+
 			case 6:
 				message.channel.send("Ne znam dali raboti ama znam deka ne mi pali brekaing bad :@@@@@");
+				break;
 		}
 	}
 
