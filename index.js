@@ -133,7 +133,7 @@ client.on("messageCreate", (message) => {
 				"Nema vreme za breaking bad ama @Minatour, @Bube, Son of Bitch aj edna brawlche",
 				"Ami kakov Breaking Bad be daj sah da igrame",
 				"Zasho da gleash serii koa moesh da chitas knigi i da igrash sah",
-				"Ke pushti od koa ke se pomine so voda",
+				"Ke pushti, pomine so voda samo",
 			];
 
 			let descList = [0, 1, 2, 3, 4, 5, 6];
