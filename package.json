@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "discord.js": "^14.6.0"
+  },
+  "name": "discordbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Petar Toshevski",
+  "license": "ISC",
+  "description": "Bot that spams marko",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PetarTosevski/Bot-Spammer.git"
+  },
+  "keywords": [
+    "Bot",
+    "Spam"
+  ],
+  "bugs": {
+    "url": "https://github.com/PetarTosevski/Bot-Spammer/issues"
+  },
+  "homepage": "https://github.com/PetarTosevski/Bot-Spammer#readme"
+}
