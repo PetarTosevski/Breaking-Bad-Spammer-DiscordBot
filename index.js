@@ -22,7 +22,7 @@ const client = new Client({
 client.on("ready", () => {
 	console.log("Bot Online!");
 
-	client.user.setActivity("Marko Pali Breaking Bad!", { type: "DEMANDING" });
+	client.user.setActivity("Marko Pali Breaking Bad!", { type: "Watching" });
 });
 
 client.on("messageCreate", (message) => {
@@ -47,6 +47,10 @@ client.on("messageCreate", (message) => {
 	const MyDiscordIt = 174972829308157952;
 	if (command === "pali") {
 		message.channel.send(`<@162969507239821312> dosta "Rabotish" i pali breaking bad vekje`);
+	}
+
+	if (command === "status") {
+		message.channel.send("Bot Online!");
 	}
 
 	//Switch
