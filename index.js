@@ -48,14 +48,22 @@ client.on("messageCreate", (message) => {
 	if (command === "rabotish?") {
 		const rndInt = Math.floor(Math.random() * 6) + 1;
 		console.log(rndInt);
-		if (rndInt == 0) message.channel.send("DA");
-		else if (rndInt == 1) message.channel.send("Ne");
-		else if (rndInt == 2) message.channel.send("Ne lmfao");
-		else if (rndInt == 3) message.channel.send("Koga rabotel marko lol");
-		else if (rndInt == 4) message.channel.send("CinCout");
-		else if (rndInt == 5) message.channel.send("Plati mi kirija be mongol :@");
-		else if (rndInt == 6)
-			message.channel.send("Ne znam dali raboti ama znam deka ne mi pali brekaing bad :@@@@@");
+		switch (rndInt) {
+			case 0:
+				message.channel.send('"DA"');
+			case 1:
+				message.channel.send("Ne");
+			case 2:
+				message.channel.send("Ne lmfao");
+			case 3:
+				message.channel.send("Koga rabotel marko lol");
+			case 4:
+				message.channel.send("CinCout");
+			case 5:
+				message.channel.send("Plati mi kirija beeee :@");
+			case 6:
+				message.channel.send("Ne znam dali raboti ama znam deka ne mi pali brekaing bad :@@@@@");
+		}
 	}
 
 	if (command === "spam") {
