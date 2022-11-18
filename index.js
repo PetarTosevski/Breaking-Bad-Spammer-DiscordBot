@@ -6,6 +6,8 @@ const {
 	Permissions,
 } = require("discord.js");
 
+require('dotenv').config();
+
 const prefix = "!Marko ";
 
 const client = new Client({
@@ -86,4 +88,4 @@ client.on("messageCreate", (message) => {
 	}
 });
 
-client.login("MTA0MzE3NTIyNzQyMjY3NDk4Ng.GkYnO1.QdJGC7XeCTtbRXO14W1p3sPBvXFiZAisfwF2vI");
+client.login(process.env.TOKEN);
