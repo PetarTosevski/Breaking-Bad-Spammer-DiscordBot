@@ -131,10 +131,10 @@ client.on("messageCreate", (message) => {
 		let rndNumber = null;
 		collector.on("collect", async (i) => {
 			let descriptionList = [
+				"Nema vreme za breaking bad sea ama ej <@140145724787654656>, <@231053093708627968> aj edna brawlche",
 				"Da be brat samo kafe da si naprai za 15 min i se pali",
 				"Ne brat, mnogu rabota ima denes",
 				"Simon brat a TI imash nekad rabota A??????",
-				"Nema vreme za breaking bad sea ama ej <@140145724787654656>, <@231053093708627968> aj edna brawlche",
 				"Ami kakov Breaking Bad be daj sah da igrame",
 				"Zasho da gleash serii koa moesh da chitas knigi i da igrash sah",
 				"Ke pushti, pomine so voda samo",
