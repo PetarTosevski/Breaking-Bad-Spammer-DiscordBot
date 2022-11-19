@@ -55,7 +55,7 @@ client.on("messageCreate", (message) => {
 
 	//Switch
 	if (command === "rabotish?") {
-		const rndInt = Math.floor(Math.random() * 6) + 1;
+		const rndInt = Math.floor(Math.random() * 7);
 		console.log(rndInt);
 		switch (rndInt) {
 			case 0:
@@ -140,13 +140,13 @@ client.on("messageCreate", (message) => {
 				"Ke pushti, pomine so voda samo",
 			];
 
-			let descList = [0, 1, 2, 3, 4, 5, 6];
+			let descIndex = [0, 1, 2, 3, 4, 5, 6];
 
-			descList.splice(rndNumber, 1);
-			let result = Math.floor(Math.random() * descList.length);
+			descIndex.splice(rndNumber, 1);
+			let result = Math.floor(Math.random() * descIndex.length);
 
-			description = descriptionList[descList[result]];
-			rndNumber = descList[result];
+			description = descriptionList[descIndex[result]];
+			rndNumber = descIndex[result];
 
 			const secondEmbed = new EmbedBuilder().setColor("DarkGreen").setDescription(`${description}`);
 
